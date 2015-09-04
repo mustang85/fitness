@@ -24,6 +24,10 @@ body {
 	font-size: $font-size-base;
 }
 
+img {
+	max-width: 100%;
+}
+
 .wrapper {
 	background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/textures/inverted/paper.png"), linear-gradient(180deg, #e1f2f1, #bae0de), center no-repeat #e1f2f1 scroll;
 	height: 100%;
@@ -134,7 +138,7 @@ body {
 	
 	.nav {
 		margin-left: 300px;
-		height: 50px;
+		height: 56px;
 
 		a {
 			font: 1.2rem/1 $babes_b;

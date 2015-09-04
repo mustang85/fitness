@@ -12,6 +12,13 @@
 
 		$rootScope.curPath = 'workout';
 		$scope.title = 'Это наш первый scope title';
+		console.log(this);
+		vm.add = function (_d) {
+			vm.page = _d;
+			console.log(vm.page);
+		}
+
+		
 	};
 
 	function config($routeProvider) {

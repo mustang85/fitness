@@ -10,7 +10,10 @@ $.material.init();
 				'appFitness.main',
 				'appFitness.about', 
 				'appFitness.contact',
-				'appFitness.workout'
+				'appFitness.workout',
+				'appFitness.profile',
+				'appFitness.statistics',
+				'appFitness.exercises',
 		])
 		.config(Config)
 

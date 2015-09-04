@@ -1,0 +1,199 @@
+<div class="profile">
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="row">
+          <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <div class="col-md-5">
+              <ul class="nav navbar-nav">
+                  <li><a href="#">Workout</a></li>
+                  <li><a href="#">Exercises</a></li>
+                  <li><a href="#">Statistics</a></li>
+                  <li class="active"><a href="#">Profile</a></li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+              <form class="navbar-form navbar-right">
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">Button</button>
+                    </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="profile_card">          
+          <img src="https://api.fnkr.net/testimg/262x150/00CED1/FFF/?text=150x150">
+          
+          <div class="statistics_user">
+            <div class="list-group">
+              <div class="list-group-item">
+                  <div class="row-picture">
+                      <img src="http://lorempixel.com/56/56/people/1" alt="icon">
+                  </div>
+                  <div class="row-content">
+                      <h4 class="list-group-item-heading">Granev Kirill</h4>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <ul class="action-group">
+              <li class="action-group-item">
+                <a ng-click="vm.add('account')" ng-class="{active: vm.page === 'account'}" href="">Учетная запись</a>
+              </li>
+              <li class="action-group-item">
+                <a href="" ng-class="{active: vm.page === 'password'}" ng-click="vm.add('password')">Пароль</a>
+              </li>
+              <li class="action-group-item">
+                <a href="" ng-class="{active: vm.page === 'design'}" ng-click="vm.add('design')">Дизайн</a>
+              </li>
+              <li class="action-group-item">
+                <a href="/">Выйти</a>
+              </li>
+            </ul>
+          
+          
+        </div>
+      </div>
+      <div class="col-md-9">
+
+      <div ng-switch on="vm.page">
+            
+            <div ng-switch-when="account">
+                <!--ng-switch-when определяет участок разметки с которым ассоциируется условие-->
+                <section class="account">
+
+                  <form class="form-horizontal">
+                    <h1>Учетная запись</h1>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-3 control-label">Имя пользователя</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Имя пользователя">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-3 control-label">Электронная почта</label>
+                            <div class="col-lg-9">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Электронная почта">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-3 control-label">Вес</label>
+                            <div class="col-lg-9">
+                                <input type="number" class="form-control" id="inputEmail" placeholder="Ваш вес">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-3 control-label">Рост</label>
+                            <div class="col-lg-9">
+                                <input type="number" class="form-control" id="inputEmail" placeholder="Ваш рост">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-3 control-label">Дата рождения</label>
+                            <div class="col-lg-9">
+                                <input type="number" class="form-control" id="inputEmail" placeholder="Дата рождения">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-9 col-lg-offset-3">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button class="btn btn-warning">Cancel</button>
+                                
+                            </div>
+                        </div>
+                </form>
+              </section>
+            </div>
+
+            <div ng-switch-when="password">
+              <form class="form-horizontal">
+                    <h1>Изменить пароль</h1>
+                        <div class="form-group">
+                            <label for="passwordOld" class="col-lg-3 control-label">Старый пароль</label>
+                            <div class="col-lg-9">
+                                <input type="password" class="form-control" id="passwordOld" placeholder="Имя пользователя">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordNew" class="col-lg-3 control-label">Новый пароль</label>
+                            <div class="col-lg-9">
+                                <input type="email" class="form-control" id="passwordNew" placeholder="Электронная почта">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordValid" class="col-lg-3 control-label">Проверить пароль</label>
+                            <div class="col-lg-9">
+                                <input type="email" class="form-control" id="passwordValid" placeholder="Электронная почта">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-9 col-lg-offset-3">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button class="btn btn-warning">Cancel</button>
+                                
+                            </div>
+                        </div>
+                </form>
+            </div>
+
+            <div ng-switch-when="design">
+              <form class="form-horizontal">
+                    <h1>Выберите цветовую гамму</h1>
+                        <div class="form-group">
+                          <div class="togglebutton togglebutton-material-pink">
+                            <label class="control-label col-lg-12">
+                            <div class="col-lg-3">Фукси</div>
+                            <input type="checkbox" checked="">
+                              <div class="toggle"></div>
+                            </label>
+                          </div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <div class="togglebutton togglebutton-material-deep-orange">
+                            <label class="control-label col-lg-12">
+                              <div class="col-lg-3">Апельсин</div>
+                              <input type="checkbox" checked="">
+                              <div class="toggle"></div>
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="togglebutton togglebutton-material">
+                              <label class="control-label col-lg-12">
+                                <div class="col-lg-3">Морская волна</div>
+                                <input type="checkbox" checked="">
+                                <div class="toggle"></div>
+                              </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-9 col-lg-offset-3">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button class="btn btn-warning">Cancel</button>
+                                
+                            </div>
+                        </div>
+                </form>
+            </div>
+
+
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
