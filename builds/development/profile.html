@@ -1,0 +1,152 @@
+<!doctype html>
+<html ng-app="ngFit">
+  <head lang="ru-RU">
+    <meta charset="UTF-8">
+    <title>This is Demo Template Which Use sass, gulp and npm-server</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <base href="/"> -->
+  </head>
+  <body>
+
+<div class="wrapper profile">
+  
+  
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="row">
+          <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <div class="col-md-5">
+              <ul class="nav navbar-nav">
+                  <li><a href="#">Workout</a></li>
+                  <li><a href="#">Exercises</a></li>
+                  <li class="active"><a href="#">Statistics</a></li>
+                  <li><a href="#">Profile</a></li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+              <form class="navbar-form navbar-right">
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">Button</button>
+                    </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="profile_card">          
+          <img src="https://api.fnkr.net/testimg/262x150/00CED1/FFF/?text=150x150">
+          
+          <div class="statistics_user">
+            <div class="list-group">
+              <div class="list-group-item">
+                  <div class="row-picture">
+                      <img src="http://lorempixel.com/56/56/people/1" alt="icon">
+                  </div>
+                  <div class="row-content">
+                      <h4 class="list-group-item-heading">Granev Kirill</h4>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <ul class="action-group">
+              <li class="action-group-item">
+                <a class="active" href="#">Учетная запись</a>
+              </li>
+              <li class="action-group-item">
+                <a href="#">Пароль</a>
+              </li>
+              <li class="action-group-item">
+                <a href="#">Дизайн</a>
+              </li>
+              <li class="action-group-item">
+                <a href="#">Выйти</a>
+              </li>
+            </ul>
+          
+          
+        </div>
+      </div>
+      <div class="col-md-9">
+        
+        <section class="account">
+
+          <form class="form-horizontal">
+            <h1>Учетная запись</h1>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-3 control-label">Имя пользователя</label>
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Имя пользователя">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-3 control-label">Электронная почта</label>
+                    <div class="col-lg-9">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Электронная почта">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-3 control-label">Вес</label>
+                    <div class="col-lg-9">
+                        <input type="number" class="form-control" id="inputEmail" placeholder="Ваш вес">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-3 control-label">Рост</label>
+                    <div class="col-lg-9">
+                        <input type="number" class="form-control" id="inputEmail" placeholder="Ваш рост">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-3 control-label">Дата рождения</label>
+                    <div class="col-lg-9">
+                        <input type="number" class="form-control" id="inputEmail" placeholder="Дата рождения">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-9 col-lg-offset-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button class="btn btn-warning">Cancel</button>
+                        
+                    </div>
+                </div>
+        </form>
+      </section>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+  
+  
+
+  
+
+  <!-- <div ng-include="'app/navbar/navbar.html'"></div>
+
+  <div class="container" ng-view></div>
+
+  <div ng-include="'app/navbar/login.html'"></div> -->
+
+  <!-- Others JS Files -->
+  <script src="libs/jquery/jquery.js"></script>
+  <script src="libs/bootstrap-material-design/js/material.js"></script>
+  <script src="libs/bootstrap-material-design/js/ripples.js"></script>
+  <!-- AngularJs vDependencies -->
+  <script src="libs/angular/angular.concat.js"></script>
+  <!-- Our JS App Fies -->
+  <script src="app/app.js"></script>
+  </body>
+</html>

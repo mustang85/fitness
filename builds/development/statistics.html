@@ -1,0 +1,122 @@
+<!doctype html>
+<html ng-app="ngFit">
+  <head lang="ru-RU">
+    <meta charset="UTF-8">
+    <title>This is Demo Template Which Use sass, gulp and npm-server</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <base href="/"> -->
+  </head>
+  <body>
+
+<div class="wrapper statistics">
+  
+  
+    <div class="navbar navbar-inverse">
+      <div class="container">
+        <div class="row">
+          <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <div class="col-md-5">
+              <ul class="nav navbar-nav">
+                  <li><a href="#">Workout</a></li>
+                  <li><a href="#">Exercises</a></li>
+                  <li class="active"><a href="#">Statistics</a></li>
+                  <li><a href="#">Profile</a></li>
+              </ul>
+            </div>
+            <div class="col-md-7">
+              <form class="navbar-form navbar-right">
+                  <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">Button</button>
+                    </span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="profile_card">          
+          <img src="https://api.fnkr.net/testimg/262x150/00CED1/FFF/?text=150x150">
+          
+          <div class="statistics_user">
+            <div class="list-group">
+              <div class="list-group-item">
+                  <div class="row-picture">
+                      <img src="http://lorempixel.com/56/56/people/1" alt="icon">
+                  </div>
+                  <div class="row-content">
+                      <h4 class="list-group-item-heading">Granev Kirill</h4>
+                  </div>
+              </div>
+          </div>
+            <ul class="nav nav-pills">
+              <li><span class="badge">13</span></li>
+              <li><span class="badge">8</span></li>
+              <li><span class="badge">99</span></li>
+              <li><span class="badge">300</span></li>
+            </ul>  
+          </div>
+          
+          
+        </div>
+      </div>
+      <div class="col-md-9">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+          <li><a href="#profile" data-toggle="tab">Profile</a></li>
+      </ul>
+      <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade active in" id="home">
+              <div class="work_card">
+                <h2>Отжимание</h2>
+                <p>График отжиманий</p>
+              </div>
+              <div class="work_card">
+                <h2>Подтягивание</h2>
+                <p>График подтягиваний</p>
+              </div>
+              <div class="work_card">
+                <h2>Приседания</h2>
+                <p>График приседаний</p>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="profile">
+              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+          </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+  
+  
+
+  
+
+  <!-- <div ng-include="'app/navbar/navbar.html'"></div>
+
+  <div class="container" ng-view></div>
+
+  <div ng-include="'app/navbar/login.html'"></div> -->
+
+  <!-- Others JS Files -->
+  <script src="libs/jquery/jquery.js"></script>
+  <script src="libs/bootstrap-material-design/js/material.js"></script>
+  <script src="libs/bootstrap-material-design/js/ripples.js"></script>
+  <!-- AngularJs vDependencies -->
+  <script src="libs/angular/angular.concat.js"></script>
+  <!-- Our JS App Fies -->
+  <script src="app/app.js"></script>
+  </body>
+</html>
