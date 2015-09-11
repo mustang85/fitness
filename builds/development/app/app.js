@@ -7,6 +7,8 @@ $.material.init();
 	angular
 		.module('appFitness', [
 				'ngRoute', 
+				'appFitness.profileMain.service',
+				'appFitness.exercisesProfile.service',
 				'appFitness.main',
 				'appFitness.about', 
 				'appFitness.contact',
@@ -16,6 +18,8 @@ $.material.init();
 				'appFitness.exercises',
 		])
 		.config(Config)
+		.constant('FIREBASE_URL', 'https://fittness.firebaseio.com/')
+		
 
 		Config.$inject = ['$routeProvider', '$locationProvider'];
 

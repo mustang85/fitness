@@ -1,30 +1,6 @@
 <div class="profile">
-    <div class="navbar navbar-inverse">
-      <div class="container">
-        <div class="row">
-          <div class="navbar-collapse collapse navbar-inverse-collapse">
-            <div class="col-md-5">
-              <ul class="nav navbar-nav">
-                  <li><a href="#">Workout</a></li>
-                  <li><a href="#">Exercises</a></li>
-                  <li><a href="#">Statistics</a></li>
-                  <li class="active"><a href="#">Profile</a></li>
-              </ul>
-            </div>
-            <div class="col-md-7">
-              <form class="navbar-form navbar-right">
-                  <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button">Button</button>
-                    </span>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+  <div ng-include="'app/profile_navbar/profile_navbar.html'"></div>
   
 
   <div class="container">
@@ -72,47 +48,50 @@
             <div ng-switch-when="account">
                 <!--ng-switch-when определяет участок разметки с которым ассоциируется условие-->
                 <section class="account">
+                <button ng-show="vm.user">SET</button>
 
-                  <form class="form-horizontal">
+                  <form class="form-horizontal" name="formUser" novalidate ng-submit="vm.updateUser(vm.users[0])">
                     <h1>Учетная запись</h1>
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-3 control-label">Имя пользователя</label>
                             <div class="col-lg-9">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Имя пользователя">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Имя пользователя" ng-model="vm.users[0].name" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-3 control-label">Электронная почта</label>
                             <div class="col-lg-9">
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Электронная почта">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Электронная почта"  ng-model="vm.users[0].email" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-3 control-label">Вес</label>
                             <div class="col-lg-9">
-                                <input type="number" class="form-control" id="inputEmail" placeholder="Ваш вес">
+                                <input type="number" class="form-control" id="inputEmail" placeholder="Ваш вес" ng-model="vm.users[0].weight" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-3 control-label">Рост</label>
                             <div class="col-lg-9">
-                                <input type="number" class="form-control" id="inputEmail" placeholder="Ваш рост">
+                                <input type="number" class="form-control" id="inputEmail" placeholder="Ваш рост" ng-model="vm.users[0].growth" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-3 control-label">Дата рождения</label>
                             <div class="col-lg-9">
-                                <input type="number" class="form-control" id="inputEmail" placeholder="Дата рождения">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Дата рождения" ng-model="vm.users[0].age" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-9 col-lg-offset-3">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                <button class="btn btn-warning">Cancel</button>
-                                
+                                <button class="btn btn-success" ng-disabled="formUser.$invalid">Save</button>
+
+                                <button class="btn btn-warning" ng-click="vm.resetEdit(vm.users[0])">Cancel</button>
                             </div>
                         </div>
                 </form>
+
+
               </section>
             </div>
 
@@ -122,26 +101,25 @@
                         <div class="form-group">
                             <label for="passwordOld" class="col-lg-3 control-label">Старый пароль</label>
                             <div class="col-lg-9">
-                                <input type="password" class="form-control" id="passwordOld" placeholder="Имя пользователя">
+                                <input type="password" class="form-control" id="passwordOld" ng-model="vm.users[0].passwordOld"  placeholder="Старый пароль">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="passwordNew" class="col-lg-3 control-label">Новый пароль</label>
                             <div class="col-lg-9">
-                                <input type="email" class="form-control" id="passwordNew" placeholder="Электронная почта">
+                                <input type="password" class="form-control" id="passwordNew" placeholder="Новый пароль" ng-model="vm.users[0].passwordNew">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="passwordValid" class="col-lg-3 control-label">Проверить пароль</label>
                             <div class="col-lg-9">
-                                <input type="email" class="form-control" id="passwordValid" placeholder="Электронная почта">
+                                <input type="password" class="form-control" id="passwordValid" placeholder="Проверить пароль" ng-model="vm.users[0].passwordValid">
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-9 col-lg-offset-3">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                <button class="btn btn-warning">Cancel</button>
-                                
+                                <button type="submit" class="btn btn-primary" ng-click="vm.updateUser(vm.users[0])">Save</button>
+                                <button class="btn btn-warning" ng-click="vm.resetEdit(vm.users[0])">Cancel</button>
                             </div>
                         </div>
                 </form>
@@ -197,3 +175,9 @@
     </div>
   </div>
 </div>
+<!-- {{vm.user}}
+<pre>
+  {{
+    vm.users | json
+  }}
+  </pre> -->

@@ -5,10 +5,15 @@
 		.config(['$routeProvider', config])
 		.controller('ExercisesCtrl', ExercisesCtrl);
 
-		ExercisesCtrl.$inject = ['scope','rootScope'];
+		ExercisesCtrl.$inject = ['$scope','$rootScope','exercisesProfile'];
 
-		function ExercisesCtrl($scope, $rootScope) {
+		function ExercisesCtrl($scope, $rootScope, exercisesProfile) {
+			var vm = this;
+			vm.section = 'exercises';
 
+			exercisesProfile.getUsers(function(_data) {
+				vm.users = _data;
+			});
 		};
 
 		function config($routeProvider) {

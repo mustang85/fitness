@@ -1,30 +1,5 @@
 <div class="exercises">
-    <div class="navbar navbar-inverse">
-      <div class="container">
-        <div class="row">
-          <div class="navbar-collapse collapse navbar-inverse-collapse">
-            <div class="col-md-5">
-              <ul class="nav navbar-nav">
-                  <li><a href="#">Workout</a></li>
-                  <li><a href="#">Exercises</a></li>
-                  <li class="active"><a href="#">Statistics</a></li>
-                  <li><a href="#">Profile</a></li>
-              </ul>
-            </div>
-            <div class="col-md-7">
-              <form class="navbar-form navbar-right">
-                  <div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button">Button</button>
-                    </span>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div ng-include="'app/profile_navbar/profile_navbar.html'"></div>
   
 
   <div class="container">
@@ -86,47 +61,17 @@
               </div>
             </div>
             
-            <div class="container-fluid exercises_item">
+            <div ng-repeat="user in vm.users" class="container-fluid exercises_item">
               <div class="well col-md-6">
                 <div class="panel panel-primary">                  
                   <div class="panel-heading">
-                      <h3 class="panel-title">Panel warning</h3>
+                      <h3 class="panel-title">{{user.title}}</h3>
                   </div>
                   <div class="panel-body">
-                      <img src="https://api.fnkr.net/testimg/340x200/00CED1/FFF/?text=img+placeholder">
+                      <img ng-src="{{user.image}}" alt="">
                   </div>
-                </div>
-              </div>
-              <div class="well col-md-6">
-                <div class="panel panel-primary">                  
-                  <div class="panel-heading">
-                      <h3 class="panel-title">Panel warning</h3>
-                  </div>
-                  <div class="panel-body">
-                      <img src="https://api.fnkr.net/testimg/340x200/00CED1/FFF/?text=img+placeholder">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="container-fluid exercises_item">
-              <div class="well col-md-6">
-                <div class="panel panel-primary">                  
-                  <div class="panel-heading">
-                      <h3 class="panel-title">Panel warning</h3>
-                  </div>
-                  <div class="panel-body">
-                      <img src="https://api.fnkr.net/testimg/334x200/00CED1/FFF/?text=img+placeholder">
-                  </div>
-                </div>
-              </div>
-              <div class="well col-md-6">
-                <div class="panel panel-primary">                  
-                  <div class="panel-heading">
-                      <h3 class="panel-title">Panel warning</h3>
-                  </div>
-                  <div class="panel-body">
-                      <img src="https://api.fnkr.net/testimg/340x200/00CED1/FFF/?text=img+placeholder">
+                  <div class="panel-footer">
+                    <p>{{user.description}}</p>
                   </div>
                 </div>
               </div>

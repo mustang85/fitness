@@ -285,7 +285,15 @@ img {
 		.row-content {
 			min-height: 36px;
 		}	
-	}	
+	}
+
+	.ng-valid {
+		color: #4caf50
+	}
+
+	.ng-invalid {
+		color: #ff5722;
+	}
 
 }
 

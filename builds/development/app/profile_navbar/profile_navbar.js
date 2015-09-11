@@ -2,7 +2,7 @@
 	"use strict";
 
 	angular
-		.module('appFitness.navbar', ['ngRoute'])
+		.module('appFitness.profilenav', ['ngRoute'])
 		.config(['$routeProvider'], function ($routeProvider) {
 			// $routeProvider
 		});
